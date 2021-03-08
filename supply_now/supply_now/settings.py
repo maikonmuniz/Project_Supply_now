@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'crispy_forms',
 
     #local apps
-    "pages.apps.PagesConfig",
+    "pages",
 ]
 
 MIDDLEWARE = [
@@ -154,3 +154,6 @@ ACCOUNT_UNIQUE_EMAIL = True
 
 
 CRISPY_TEMPLATES_PACK = 'booststrap4'
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/") 

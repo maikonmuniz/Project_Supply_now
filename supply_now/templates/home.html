@@ -3,6 +3,12 @@
 {% block title %}Supply{% endblock %}
 
 {% block content %}
-    Olá!
+    {% for prod in produtos %}
+    <div>
+        <p>{{prod.nome}}</p>
+        <p>R${{prod.preco}}</p>
+        <img src="{{ prod.photo_prod.url }}">
+    </div>
+    {% endfor %}
 {% endblock %}
-© 2021 Maikon Muniz da Silva, Inc.
+© 2021 Devil Ops, Inc.

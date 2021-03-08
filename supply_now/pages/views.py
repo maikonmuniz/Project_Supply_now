@@ -1,8 +1,10 @@
-from django.views.generic import TemplateView
+from .models import PRODUTO
+from django.shortcuts import render
 
-# Class chama home
 
-class HomePageView(TemplateView):
-    template_name = "home.html"
 
+
+def listar_produtos(request):
+    produtos = PRODUTO.objects.all()
+    return render(request, 'home.html', {'produtos': produtos})
 
