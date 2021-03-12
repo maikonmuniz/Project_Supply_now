@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from .models import PRODUTO
+from .models import Produto
 
 
 def listar_produtos(request):
-    produtos = PRODUTO.objects.all()
+    produtos = Produto.objects.all()
     return render(request, 'home.html', {'produtos': produtos})
