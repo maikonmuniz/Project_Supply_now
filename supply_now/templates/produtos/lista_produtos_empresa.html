@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 
-{% block title %}Supply{% endblock %}
+{% block title %}Supply - Lista de Produtos Empresa{% endblock %}
 
 {% block content %}
+    <a class="navbar-brand" href="{% url 'pages:cad_prod' %}">Cadastrar Produtos</a>
     {% for prod in produtos %}
     <div>
         <img src="{{ prod.photo_prod.url }}">
         <p>{{prod.nome}}</p>
         <p>R${{prod.preco}}</p>
+        <a href="editProduto/{{prod.id}}">Editar</a>
     </div>
     {% endfor %}
 {% endblock %}

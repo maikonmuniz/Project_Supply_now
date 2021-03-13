@@ -81,20 +81,21 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'supply_now.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-'default': {
+
+    'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.environ.get('DB_NAME', 'supply_now'),
         'USER': os.environ.get('DB_USER', 'postgres'),
-        'PASSWORD': os.environ.get('DB_PASS', ''),
+        'PASSWORD': os.environ.get('DB_PASS', 'Mknmnz@123'),
         'HOST': 'localhost',
         'PORT': '5432',
     }
 }
+
 
 
 # Password validation
@@ -152,8 +153,7 @@ ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 
-
 CRISPY_TEMPLATES_PACK = 'booststrap4'
 
 MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media/") 
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
